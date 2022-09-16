@@ -43,16 +43,17 @@ const funcionCargar = function() {
 }
 
 const funcionComprar = function() {
-let precioP = 0;
+
     let filtroNombre = prompt('Sabes que producto necesitas? Busquemoslo por su nombre... ')
-    let result = cargaProductos.filter(el => {el.nombre == filtroNombre 
-        return })
-    console.log(result);
-    if (result === []){
-        alert('No se encontro el producto que buscabas')
-    }else{
-    alert(`El producto ${filtroNombre} se encuentra disponible, te sale $${precioP}`)
-}
+    let result = cargaProductos.filter(el => {return el.nombre == filtroNombre})
+    // console.log(result);
+    if (result.length ===0){
+
+        alert(`Disculpa no se encontro el producto que buscabas`)
+    }else {
+        alert(`Perfecto, todavia tenemos el producto en stock`)
+    }
+    
 }
 
 
